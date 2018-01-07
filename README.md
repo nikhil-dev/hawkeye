@@ -20,7 +20,7 @@ This model has been ported to Tensorflow Eager, which gives us a better Pythonic
 ### Instructions to run locally
 
 1. Collect a dataset with images that contain backgrounds representative of your use case (I trained it on a variety of backgrounds. I will be releasing the dataset I used soon).
-2. Install Tensorflow from the nightly build (we need nightly builds for TF Eager unless you have >=1.5)
+2. ```pip install tf-nightly``` (we need nightly builds for TF Eager unless you have >=1.5)
 3. ```python main.py --pretrain-cnn``` to pretrain they YOLO like network. ```python main.py``` to train the whole system.
 
 
