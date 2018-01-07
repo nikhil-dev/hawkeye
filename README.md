@@ -1,4 +1,4 @@
-# HawkeyeNet. 
+# HawkeyeNet
 
 ### Motivation
 
@@ -10,6 +10,8 @@ The above systems cost millions of dollars, and are only available to profession
 ### Technical Details
 
 The model consists of a recurrent neural network augmented with a [YOLO](https://arxiv.org/abs/1506.02640)-like network. The YOLO-like network is pre-trained by framing ball tracking as a regression problem. The recurrent units enable us to take advantage of spatio-temporal properties of ball tracking in sports.
+
+The training is performed by using a fixed set of base images and generating stochastic ball trajectory sequences (similar to data augmentation). The thus generated ```(image, label)``` frames are used for training.
 
 The system can track cricket and tennis balls using a smartphone camera (much lower resolution than professional sports cameras used for Hawkeye systems in stadiums), from a distance, in the presence of motion blur, varied backgrounds and occlusion, while being able to run on a mobile device.
 
